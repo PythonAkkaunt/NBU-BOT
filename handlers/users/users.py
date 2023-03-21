@@ -1,7 +1,7 @@
 from aiogram import Dispatcher
 from aiogram.types import *
 
-from loader import dp
+# from loader import dp
 from database.connections import add_user
 
 
