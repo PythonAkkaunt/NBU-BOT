@@ -3,7 +3,7 @@ from aiogram.types import *
 
 # from loader import dp
 from database.connections import add_user
-
+from utils.misc.nbu_parser import get_currency
 
 
 async def bot_start(message: Message):
@@ -11,6 +11,8 @@ async def bot_start(message: Message):
     user_name = message.from_user.username
     await add_user(user_id, user_name)
     await message.answer(f"Привет, {message.from_user.full_name}!")
+    await get_currency()
+
 
 
 def register_users_py(dp: Dispatcher):
